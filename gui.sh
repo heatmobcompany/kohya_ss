@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+current_dir=$(dirname "$(readlink -f "$0")")
+source $current_dir/venv/bin/activate
+
 # Checks to see if variable is set and non-empty.
 # This is defined first, so we can use the function for some default variable values
 env_var_exists() {
